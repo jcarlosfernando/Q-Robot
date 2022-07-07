@@ -16,9 +16,31 @@ Tested on Ubuntu 18.04 with ROS Melodic 1.14.13
 
 2 - Install CHAMP package folowing this instructions [here](https://github.com/chvmp/champ#champ-);
 
-3 - Follow the instructions to create your own robot using champ_setup_assistent;
+3 - Follow the instructions to create your own robot using [champ_setup_assistent](https://github.com/chvmp/champ_setup_assistant);
 
-4 - Running the rosserial package
+4 - Running the rosserial package:
 
+* cd <your_ws>/
+* catkin_make
+* source devel/setup.bash
+* roslaunch rosserial_server socket.launch
 
-5
+5 - Open another terminal and running the CHAMP package of your robot configuration:
+
+* cd <your_ws>/
+* catkin_make
+* source devel/setup.bash
+* roslaunch <myrobot_config> bringup.launch
+
+6 - To control your robot by laptop's keybord, run the teleop node:
+
+* cd <your_ws>/
+* catkin_make
+* source devel/setup.bash
+* roslaunch champ_teleop teleop.launch
+
+If you want to use a joystick add joy:=true as an argument on the last command line:
+
+* roslaunch champ_teleop teleop.launch joy:=true
+
+7 - To autonoumus mode, with the Fuzzy obstacle avoidance, run the Matlab code
