@@ -43,4 +43,4 @@ If you want to use a joystick add joy:=true as an argument on the last command l
 
 * roslaunch champ_teleop teleop.launch joy:=true
 
-7 - To autonoumus mode, with the Fuzzy obstacle avoidance, run the Matlab code
+7 - To autonoumus mode, with the Fuzzy obstacle avoidance, run the Matlab code "Autonomous_Mode.m", in folder "Q-Robot_Autonomous_Mode".
